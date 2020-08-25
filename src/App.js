@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Heading from "./components/heading.js";
 import Form from "./components/form.js";
+import Forecast from "./components/forecast.js";
 
 
 const api_key = "c947bff56ae5911bc4532e0f0849eb41";
@@ -20,8 +21,8 @@ class App extends React.Component {
   }
 
    getWeather = async (e) => {
-     const city = e.target.element.city.value;
-     const country = e.target.element.country.value;
+     const city = e.target.elements.city.value;
+     const country = e.target.elements.country.value;
      e.preventDefault();
      const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&APPID=${api_key}`)
 
@@ -47,7 +48,17 @@ class App extends React.Component {
     return(
     <div>
       <Heading/>
-      <Form />
+      <Form loadWeather={this.getWeather} />
+      <Forecast 
+      temperature={this.state.temperature} 
+      city={this.state.city}
+      country={this.state.country}
+      humidity={this.state.humidity}
+      pressure={this.state.pressure}
+      icon={this.state.icon}
+      description={this.state.description}
+      error={this.state.error}/>
+      
    </div>
    )
   }
