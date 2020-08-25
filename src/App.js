@@ -33,11 +33,16 @@ class App extends React.Component {
          country: response.sys.country,
          humidity: response.main.humidity,
          pressure: response.main.pressure,
-         
-       })
-
-     }
-   }
+         icon: response.weather[0].icon, //will have an array of different icons so set it to [0]
+         description: response.weather[0].description, //will have an array of different descriptions
+         error: ""
+      })
+    } else{
+      this.setState({
+        error: "Please fill out imput fields..." //if someone doesn't fill out the form they'll get this statement in return
+      })
+    }
+  }
   render() {
     return(
     <div>
