@@ -47,7 +47,7 @@ class App extends React.Component {
     return(
     <div>
       <Heading/>
-      <Form/>
+      <Form />
    </div>
    )
   }
