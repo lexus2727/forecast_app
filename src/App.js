@@ -44,15 +44,9 @@ class App extends React.Component {
   catch (error){
     alert("Please fill out form");
     return console.log(error);
-  }
+    }
 
-    /*else {
-      this.setState({
-        error: "Please fill out imput fields..." //if someone doesn't fill out the form they'll get this statement in return
-      })
-    
    
-    }*/
   };
   render() {
     return(
