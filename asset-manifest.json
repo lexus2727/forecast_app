@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/forecast_app/static/css/main.df73f6b9.chunk.css",
+    "main.js": "/forecast_app/static/js/main.462c1dc6.chunk.js",
+    "main.js.map": "/forecast_app/static/js/main.462c1dc6.chunk.js.map",
+    "runtime-main.js": "/forecast_app/static/js/runtime-main.e96f38d3.js",
+    "runtime-main.js.map": "/forecast_app/static/js/runtime-main.e96f38d3.js.map",
+    "static/js/2.5bdb35cf.chunk.js": "/forecast_app/static/js/2.5bdb35cf.chunk.js",
+    "static/js/2.5bdb35cf.chunk.js.map": "/forecast_app/static/js/2.5bdb35cf.chunk.js.map",
+    "index.html": "/forecast_app/index.html",
+    "precache-manifest.fd710cdcdd331e492d8efbd205baa9bc.js": "/forecast_app/precache-manifest.fd710cdcdd331e492d8efbd205baa9bc.js",
+    "service-worker.js": "/forecast_app/service-worker.js",
+    "static/css/main.df73f6b9.chunk.css.map": "/forecast_app/static/css/main.df73f6b9.chunk.css.map",
+    "static/js/2.5bdb35cf.chunk.js.LICENSE.txt": "/forecast_app/static/js/2.5bdb35cf.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/forecast_app/static/media/cloud_pic.d9c470c3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e96f38d3.js",
+    "static/js/2.5bdb35cf.chunk.js",
+    "static/css/main.df73f6b9.chunk.css",
+    "static/js/main.462c1dc6.chunk.js"
+  ]
+}
