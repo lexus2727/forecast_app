@@ -24,8 +24,9 @@ class App extends React.Component {
      const city = e.target.elements.city.value;
      const country = e.target.elements.country.value;
      e.preventDefault();
+     
      const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&APPID=${api_key}`)
-
+     try {
      const response = await api_call.json(); //if city and state are inputted correctly then ..
      if(city && country) {
        this.setState({
@@ -38,17 +39,27 @@ class App extends React.Component {
          description: response.weather[0].description, //will have an array of different descriptions
          error: ""
       })
-    } else{
+    } 
+  }
+  catch (error){
+    alert("Please fill out form");
+    return console.log(error);
+  }
+
+    /*else {
       this.setState({
         error: "Please fill out imput fields..." //if someone doesn't fill out the form they'll get this statement in return
       })
-    }
-  }
+    
+   
+    }*/
+  };
   render() {
     return(
-    <div>
+    <div className="container">
       <Heading/>
-      <Form loadWeather={this.getWeather} />
+      <div className="form">
+      <Form loadWeather={this.getWeather}/></div>
       <Forecast 
       temperature={this.state.temperature} 
       city={this.state.city}
@@ -57,10 +68,8 @@ class App extends React.Component {
       pressure={this.state.pressure}
       icon={this.state.icon}
       description={this.state.description}
-      error={this.state.error}/>
-      
-   </div>
-   )
+      error={this.state.error}/></div>
+     )
   }
  
 }

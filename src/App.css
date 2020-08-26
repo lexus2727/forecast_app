@@ -1,0 +1,37 @@
+
+
+
+ html{
+  box-sizing:
+  border-box;
+}
+
+
+/*if you use any third party plug-ins or components it will inherit the border-box*/
+*, *:before, *:after {
+  box-sizing: inherit; 
+}
+
+.container {
+  background-image: url('./images/cloud_pic.jpg');
+  width: 50%;
+  border: 3px solid rgb(0, 102, 255);
+  box-shadow: 2px 2px rgb(0, 82, 204); 
+  text-align: center;
+  margin: 20px auto;
+
+} 
+
+
+
+.form{
+  margin: 5px;
+  /*padding: 5px;*/
+}
+
+.form input {
+  margin: 5px;
+  text-align: center;
+  border-radius: 5px;
+} 
+

@@ -5,7 +5,7 @@ const Form = (props) => {
         <form onSubmit = {props.loadWeather}>
             <input type="text" name="city" placeholder="Choose a City"/>
             <input type="text" name="country" placeholder="Choose a Country" />
-            <button>Get Weather</button>
+            <button>Get Weather</button> 
         </form>
 
 
@@ -13,3 +13,4 @@ const Form = (props) => {
 }
 
 export default Form;
+//the button triggers the api call
